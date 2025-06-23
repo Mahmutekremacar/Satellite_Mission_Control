@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.hellofx.HelloController">
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" prefWidth="500" prefHeight="500">
+        <Label text="Satellite Mission Control" style="-fx-font-size: 18;" />
+
+        <TextField fx:id="nameField" promptText="Satellite Name" />
+        <TextField fx:id="intervalField" promptText="Interval (s)" />
+        <TextField fx:id="regionField" promptText="Target Region" />
+        <Button text="Create Satellite" onAction="#onCreateSatelliteClicked" />
+
+        <ListView fx:id="satelliteList" prefHeight="150"/>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Activate" onAction="#onActivateClicked" />
+            <Button text="Deactivate" onAction="#onDeactivateClicked" />
+        </HBox>
+
+        <Button text="Run Mission" onAction="#onRunMissionClicked" />
+
+        <TextArea fx:id="logArea" prefHeight="150" wrapText="true"/>
+    </VBox>
+</AnchorPane>
